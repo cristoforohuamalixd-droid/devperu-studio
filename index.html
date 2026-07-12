@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevPerú Studio - Desarrollo Web Profesional</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">Dev<span>Perú</span></a>
+            <nav class="nav">
+                <a href="#servicios">Servicios</a>
+                <a href="#portafolio">Portafolio</a>
+                <a href="#precios">Precios</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+            <button class="menu-btn" id="menuBtn">☰</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Tu negocio necesita presencia digital</h1>
+            <p>Creamos sitios web modernos, rápidos y que convierten visitantes en clientes</p>
+            <div class="hero-buttons">
+                <a href="#contacto" class="btn btn-primary">Solicitar Presupuesto</a>
+                <a href="#portafolio" class="btn btn-secondary">Ver Trabajos</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <div class="stat">
+                <span class="stat-number">50+</span>
+                <span class="stat-label">Proyectos Entregados</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">Clientes Satisfechos</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">24h</span>
+                <span class="stat-label">Tiempo de Respuesta</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="servicios" id="servicios">
+        <div class="container">
+            <h2>Nuestros Servicios</h2>
+            <div class="servicios-grid">
+                <div class="servicio-card">
+                    <div class="servicio-icon">🌐</div>
+                    <h3>Landing Page</h3>
+                    <p>Página única y atractiva para captar clientes y vender tus servicios</p>
+                    <span class="servicio-price">Desde S/ 150</span>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">💻</div>
+                    <h3>Sitio Web Corporativo</h3>
+                    <p>Sitio completo con múltiples páginas para tu empresa o negocio</p>
+                    <span class="servicio-price">Desde S/ 280</span>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">🛒</div>
+                    <h3>Tienda Online</h3>
+                    <p>E-commerce con carrito de compras y pasarela de pagos</p>
+                    <span class="servicio-price">Desde S/ 400</span>
+                </div>
+                <div class="servicio-card">
+                    <div class="servicio-icon">📱</div>
+                    <h3>App Web a Medida</h3>
+                    <p>Sistemas personalizados: CRMs, dashboards, administración</p>
+                    <span class="servicio-price">Desde S/ 400</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="portafolio" id="portafolio">
+        <div class="container">
+            <h2>Nuestros Trabajos</h2>
+            <div class="portafolio-grid">
+                <div class="portafolio-item">
+                    <div class="portafolio-img placeholder-img">Restaurante</div>
+                    <h4>Sitio Web Restaurante</h4>
+                    <p>Landing page con menú online y reservas</p>
+                </div>
+                <div class="portafolio-item">
+                    <div class="portafolio-img placeholder-img">E-commerce</div>
+                    <h4>Tienda de Ropa</h4>
+                    <p>E-commerce completo con pasarela de pagos</p>
+                </div>
+                <div class="portafolio-item">
+                    <div class="portafolio-img placeholder-img">Clínica</div>
+                    <h4>Sitio Corporativo</h4>
+                    <p>Página profesional para clínica odontológica</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="proceso">
+        <div class="container">
+            <h2>Cómo Trabajamos</h2>
+            <div class="proceso-steps">
+                <div class="step">
+                    <span class="step-number">1</span>
+                    <h3>Consulta</h3>
+                    <p>Nos cuentas qué necesitas y te damos una cotización</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">2</span>
+                    <h3>Diseño</h3>
+                    <p>Creamos el diseño de tu sitio para tu aprobación</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">3</span>
+                    <h3>Desarrollo</h3>
+                    <p>Programamos tu sitio con las mejores tecnologías</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">4</span>
+                    <h3>Entrega</h3>
+                    <p>Recibe tu sitio web listo para usar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="precios" id="precios">
+        <div class="container">
+            <h2>Planes y Precios</h2>
+            <div class="precios-grid">
+                <div class="precio-card free">
+                    <span class="badge-free">1 Año Gratis</span>
+                    <h3>Plan Gratis</h3>
+                    <div class="precio">S/ 0</div>
+                    <p class="precio-detail">1 año completamente gratis</p>
+                    <ul>
+                        <li>Landing page básica</li>
+                        <li>Diseño responsive</li>
+                        <li>Formulario de contacto</li>
+                        <li>Hosting 1 año incluido</li>
+                        <li>Subdominio gratuito</li>
+                        <li>Soporte por email</li>
+                    </ul>
+                    <a href="#contacto" class="btn btn-free">Empezar Gratis</a>
+                    <p class="precio-note">* Sin tarjeta de crédito</p>
+                </div>
+                <div class="precio-card">
+                    <h3>Básico</h3>
+                    <div class="precio">S/ 150</div>
+                    <ul>
+                        <li>Landing page</li>
+                        <li>Diseño responsive</li>
+                        <li>Formulario de contacto</li>
+                        <li>Hosting 1 año incluido</li>
+                        <li>Soporte por email</li>
+                    </ul>
+                    <a href="#contacto" class="btn btn-outline">Elegir Plan</a>
+                </div>
+                <div class="precio-card featured">
+                    <span class="badge">Popular</span>
+                    <h3>Profesional</h3>
+                    <div class="precio">S/ 280</div>
+                    <ul>
+                        <li>Sitio web (5 páginas)</li>
+                        <li>Diseño personalizado</li>
+                        <li>SEO básico</li>
+                        <li>Dominio incluido</li>
+                        <li>Hosting 1 año</li>
+                        <li>Soporte 1 mes</li>
+                    </ul>
+                    <a href="#contacto" class="btn btn-primary">Elegir Plan</a>
+                </div>
+                <div class="precio-card">
+                    <h3>Premium</h3>
+                    <div class="precio">S/ 400</div>
+                    <ul>
+                        <li>Sitio web (10 páginas)</li>
+                        <li>E-commerce básico</li>
+                        <li>Panel de administración</li>
+                        <li>Dominio + Hosting 1 año</li>
+                        <li>SEO optimizado</li>
+                        <li>Soporte 2 meses</li>
+                    </ul>
+                    <a href="#contacto" class="btn btn-outline">Elegir Plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contacto" id="contacto">
+        <div class="container">
+            <h2>Solicita tu Presupuesto</h2>
+            <div class="contacto-content">
+                <form class="contacto-form" id="contactForm">
+                    <input type="text" name="nombre" placeholder="Tu nombre" required>
+                    <input type="email" name="email" placeholder="Tu email" required>
+                    <input type="tel" name="telefono" placeholder="Tu teléfono">
+                    <select name="servicio" required>
+                        <option value="">¿Qué necesitas?</option>
+                        <option value="landing">Landing Page</option>
+                        <option value="corporativo">Sitio Corporativo</option>
+                        <option value="ecommerce">Tienda Online</option>
+                        <option value="app">App Web a Medida</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                    <textarea name="mensaje" placeholder="Cuéntanos sobre tu proyecto" rows="4"></textarea>
+                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                </form>
+                <div class="contacto-info">
+                    <div class="info-item">
+                        <strong>WhatsApp:</strong>
+                        <a href="https://wa.me/51999999999" target="_blank">+51 999 999 999</a>
+                    </div>
+                    <div class="info-item">
+                        <strong>Email:</strong>
+                        <a href="mailto:contacto@devperu.com">contacto@devperu.com</a>
+                    </div>
+                <div class="info-item">
+                    <strong>Instagram:</strong>
+                    <a href="#">@devperu.studio</a>
+                </div>
+                <div class="payment-info">
+                    <strong>Métodos de Pago:</strong>
+                    <div class="payment-methods-list">
+                        <span>📱 Yape</span>
+                        <span>💳 Plin</span>
+                        <span>🏦 Transferencia</span>
+                    </div>
+                </div>
+                <a href="panel-pagos.html" class="btn btn-secondary" target="_blank">⚙️ Configurar Mis Pagos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 DevPerú Studio. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

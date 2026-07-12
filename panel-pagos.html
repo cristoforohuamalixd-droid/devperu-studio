@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Pagos - DevPerú Studio</title>
+    <link rel="stylesheet" href="panel-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Panel de Pagos</h1>
+            <p>Configura tus métodos de cobro</p>
+        </header>
+
+        <div class="panel-grid">
+            <!-- Formulario de Métodos de Pago -->
+            <div class="card">
+                <h2>Métodos de Pago</h2>
+                <form id="paymentMethodsForm">
+                    <div class="payment-method">
+                        <div class="method-header">
+                            <span class="method-icon">📱</span>
+                            <h3>Yape</h3>
+                            <label class="toggle">
+                                <input type="checkbox" id="yapeEnabled" checked>
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="method-fields" id="yapeFields">
+                            <input type="text" id="yapeName" placeholder="Nombre en Yape">
+                            <input type="tel" id="yapeNumber" placeholder="Número de Yape (9 dígitos)">
+                            <div class="qr-upload">
+                                <label for="yapeQR">Código QR (opcional):</label>
+                                <input type="file" id="yapeQR" accept="image/*">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="payment-method">
+                        <div class="method-header">
+                            <span class="method-icon">💳</span>
+                            <h3>Plin</h3>
+                            <label class="toggle">
+                                <input type="checkbox" id="plinEnabled">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="method-fields" id="plinFields" style="display:none">
+                            <input type="text" id="plinName" placeholder="Nombre en Plin">
+                            <input type="tel" id="plinNumber" placeholder="Número de Plin (9 dígitos)">
+                        </div>
+                    </div>
+
+                    <div class="payment-method">
+                        <div class="method-header">
+                            <span class="method-icon">🏦</span>
+                            <h3>Transferencia Bancaria</h3>
+                            <label class="toggle">
+                                <input type="checkbox" id="bankEnabled">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="method-fields" id="bankFields" style="display:none">
+                            <select id="bankName">
+                                <option value="">Selecciona banco</option>
+                                <option value="BCP">BCP</option>
+                                <option value="Interbank">Interbank</option>
+                                <option value="BBVA">BBVA</option>
+                                <option value="Scotiabank">Scotiabank</option>
+                                <option value="BanBif">BanBif</option>
+                                <option value="Pichincha">Pichincha</option>
+                                <option value="Mi Banco">Mi Banco</option>
+                            </select>
+                            <input type="text" id="bankAccount" placeholder="N° de Cuenta">
+                            <input type="text" id="bankCCI" placeholder="CCI (opcional)">
+                            <input type="text" id="bankHolder" placeholder="Titular de la cuenta">
+                        </div>
+                    </div>
+
+                    <div class="payment-method">
+                        <div class="method-header">
+                            <span class="method-icon">💰</span>
+                            <h3>Efectivo</h3>
+                            <label class="toggle">
+                                <input type="checkbox" id="cashEnabled">
+                                <span class="slider"></span>
+                            </label>
+                        </div>
+                        <div class="method-fields" id="cashFields" style="display:none">
+                            <input type="text" id="cashLocation" placeholder="Punto de entrega">
+                            <input type="text" id="cashTime" placeholder="Horario disponible">
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Guardar Métodos de Pago</button>
+                </form>
+            </div>
+
+            <!-- Vista Previa -->
+            <div class="card">
+                <h2>Vista Previa - Lo que ve el cliente</h2>
+                <div class="preview-section">
+                    <div class="preview-header">
+                        <h3>Métodos de Pago Disponibles</h3>
+                    </div>
+                    <div class="preview-methods" id="previewMethods">
+                        <!-- Se llena con JavaScript -->
+                    </div>
+                </div>
+
+                <div class="actions">
+                    <h3>Acciones Rápidas</h3>
+                    <button class="btn btn-secondary" onclick="copyPaymentInfo()">📋 Copiar Info de Pagos</button>
+                    <button class="btn btn-secondary" onclick="sharePaymentInfo()">📤 Compartir por WhatsApp</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Configuración de Notificaciones -->
+        <div class="card full-width">
+            <h2>Notificaciones de Pago</h2>
+            <div class="notification-settings">
+                <div class="setting-item">
+                    <label>¿Dónde recibir confirmaciones de pago?</label>
+                    <div class="setting-options">
+                        <input type="tel" id="notifPhone" placeholder="Tu número de WhatsApp">
+                        <input type="email" id="notifEmail" placeholder="Tu email (opcional)">
+                    </div>
+                </div>
+                <div class="setting-item">
+                    <label>Mensaje automático al cliente después de pagar:</label>
+                    <textarea id="thankYouMessage" rows="3">¡Gracias por tu pago! Tu proyecto está en proceso. Te contactaremos pronto con el avance.</textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- Historial de Pagos Simulados -->
+        <div class="card full-width">
+            <h2>Historial de Pagos</h2>
+            <div class="payment-history">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Cliente</th>
+                            <th>Proyecto</th>
+                            <th>Monto</th>
+                            <th>Método</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="paymentHistory">
+                        <tr>
+                            <td>12/07/2026</td>
+                            <td>Juan Pérez</td>
+                            <td>Landing Page</td>
+                            <td>S/ 150</td>
+                            <td>Yape</td>
+                            <td><span class="status paid">Pagado</span></td>
+                        </tr>
+                        <tr>
+                            <td>11/07/2026</td>
+                            <td>María García</td>
+                            <td>Sitio Corporativo</td>
+                            <td>S/ 280</td>
+                            <td>BCP</td>
+                            <td><span class="status pending">Pendiente</span></td>
+                        </tr>
+                        <tr>
+                            <td>10/07/2026</td>
+                            <td>Carlos López</td>
+                            <td>E-commerce</td>
+                            <td>S/ 400</td>
+                            <td>Plin</td>
+                            <td><span class="status paid">Pagado</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="panel-script.js"></script>
+</body>
+</html>
