@@ -1,4 +1,3 @@
-// Mobile menu toggle
 const menuBtn = document.getElementById('menuBtn');
 const nav = document.querySelector('.nav');
 
@@ -6,7 +5,6 @@ menuBtn.addEventListener('click', () => {
     nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
 });
 
-// Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -20,7 +18,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Form submission
 const contactForm = document.getElementById('contactForm');
 
 contactForm.addEventListener('submit', function(e) {
@@ -28,37 +25,30 @@ contactForm.addEventListener('submit', function(e) {
     
     const formData = new FormData(this);
     const nombre = formData.get('nombre');
-    const email = formData.get('email');
     const servicio = formData.get('servicio');
     const mensaje = formData.get('mensaje');
     
-    // Create WhatsApp message
     const whatsappMessage = `Hola, soy ${nombre}. ${mensaje}. Servicio requerido: ${servicio}`;
-    const whatsappUrl = `https://wa.me/51999999999?text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappUrl = `https://wa.me/51953771229?text=${encodeURIComponent(whatsappMessage)}`;
     
-    // Show success message
     alert('¡Mensaje listo! Serás redirigido a WhatsApp para enviar tu solicitud.');
     
-    // Open WhatsApp (uncomment when you have a real number)
-    // window.open(whatsappUrl, '_blank');
+    window.open(whatsappUrl, '_blank');
     
-    // Reset form
     this.reset();
 });
 
-// Header scroll effect
 window.addEventListener('scroll', () => {
     const header = document.querySelector('.header');
-    if (window.scrollY > 100) {
-        header.style.background = 'rgba(255,255,255,0.95)';
-        header.style.backdropFilter = 'blur(10px)';
+    if (window.scrollY > 50) {
+        header.style.background = 'rgba(10, 10, 26, 0.95)';
+        header.style.boxShadow = '0 5px 30px rgba(0,0,0,0.3)';
     } else {
-        header.style.background = '#ffffff';
-        header.style.backdropFilter = 'none';
+        header.style.background = 'rgba(10, 10, 26, 0.9)';
+        header.style.boxShadow = 'none';
     }
 });
 
-// Animate elements on scroll
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -73,7 +63,6 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe all cards and sections
 document.querySelectorAll('.servicio-card, .portafolio-item, .step, .precio-card').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(20px)';
