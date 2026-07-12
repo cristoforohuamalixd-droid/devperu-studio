@@ -644,6 +644,50 @@ h2 span {
     border: 1px solid rgba(108, 92, 231, 0.3);
 }
 
+/* Chat Widget */
+.chat-widget {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 1.2rem;
+    background: linear-gradient(135deg, rgba(108, 92, 231, 0.2), rgba(0, 206, 201, 0.2));
+    border-radius: 12px;
+    border: 1px solid rgba(108, 92, 231, 0.4);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.chat-widget:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(108, 92, 231, 0.3);
+    border-color: var(--primary);
+}
+
+.chat-widget-icon {
+    font-size: 2rem;
+}
+
+.chat-widget-text {
+    flex: 1;
+}
+
+.chat-widget-text strong {
+    display: block;
+    color: var(--white);
+    font-size: 1rem;
+    margin-bottom: 3px;
+}
+
+.chat-widget-text span {
+    color: var(--gray);
+    font-size: 0.85rem;
+}
+
+.chat-widget-arrow {
+    font-size: 1.5rem;
+    color: var(--accent);
+}
+
 /* Footer */
 .footer {
     background: rgba(0, 0, 0, 0.3);

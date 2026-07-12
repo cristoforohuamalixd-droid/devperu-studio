@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevPerú Studio - Chat</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="chat-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Dev<span>Perú</span></a>
+            <nav class="nav">
+                <a href="index.html">Inicio</a>
+                <a href="index.html#servicios">Servicios</a>
+                <a href="index.html#contacto">Contacto</a>
+            </nav>
+            <button class="menu-btn" id="menuBtn">☰</button>
+        </div>
+    </header>
+
+    <section class="chat-page">
+        <div class="container">
+            <div class="chat-container">
+                <div class="chat-header">
+                    <div class="chat-avatar">👨‍💻</div>
+                    <div class="chat-info">
+                        <h2>DevPerú Studio</h2>
+                        <span class="chat-status">● En línea</span>
+                    </div>
+                </div>
+                
+                <div class="chat-messages" id="chatMessages">
+                    <div class="message developer">
+                        <div class="msg-avatar">🤖</div>
+                        <div class="msg-bubble">
+                            ¡Hola! Soy el asistente de DevPerú Studio. ¿En qué puedo ayudarte hoy?
+                        </div>
+                        <span class="msg-time">Ahora</span>
+                    </div>
+                    <div class="message developer">
+                        <div class="msg-avatar">🤖</div>
+                        <div class="msg-bubble">
+                            Puedes preguntarme sobre:<br>
+                            • Precios y planes<br>
+                            • Servicios disponibles<br>
+                            • Plazos de entrega<br>
+                            • Métodos de pago
+                        </div>
+                        <span class="msg-time">Ahora</span>
+                    </div>
+                </div>
+
+                <div class="chat-quick-replies">
+                    <button class="quick-reply" data-response="¿Cuánto cuesta una landing page?">💰 Precios</button>
+                    <button class="quick-reply" data-response="¿Qué servicios ofrecen?">📋 Servicios</button>
+                    <button class="quick-reply" data-response="¿Cuánto tarda en estar listo?">⏱️ Plazos</button>
+                    <button class="quick-reply" data-response="¿Cómo puedo pagar?">💳 Pagos</button>
+                </div>
+
+                <div class="chat-input-area">
+                    <input type="text" id="chatInput" placeholder="Escribe tu mensaje..." autocomplete="off">
+                    <button id="sendBtn" class="send-btn">➤</button>
+                </div>
+
+                <div class="chat-footer">
+                    <span>Respuesta automática • </span>
+                    <a href="https://wa.me/51953771229?text=Hola,%20necesito%20ayuda%20con%20un%20proyecto" target="_blank" class="whatsapp-link">📱 Hablar por WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="chat-script.js"></script>
+</body>
+</html>
