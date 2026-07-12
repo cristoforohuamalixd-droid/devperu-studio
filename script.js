@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Animate elements on scroll
-    var animatedElements = document.querySelectorAll('.servicio-card, .portafolio-item, .step, .precio-card');
+    var animatedElements = document.querySelectorAll('.servicio-card, .step, .precio-card');
     
     function checkVisible() {
         animatedElements.forEach(function(el) {

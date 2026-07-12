@@ -327,41 +327,86 @@ h2 span {
     border-radius: 20px;
     overflow: hidden;
     border: 1px solid rgba(255,255,255,0.05);
-    transition: all 0.3s;
+    transition: all 0.4s;
+    cursor: pointer;
+    background: var(--glass);
 }
 
 .portafolio-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(108, 92, 231, 0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(108, 92, 231, 0.3);
+    border-color: rgba(108, 92, 231, 0.4);
 }
 
 .portafolio-img {
-    height: 220px;
+    height: 200px;
+    background: var(--gradient);
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-icon {
+    font-size: 4rem;
+    transition: transform 0.4s;
+}
+
+.portafolio-item:hover .portfolio-icon {
+    transform: scale(1.2);
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 10, 26, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s;
+}
+
+.portafolio-item:hover .portfolio-overlay {
+    opacity: 1;
+}
+
+.portfolio-overlay span {
+    background: var(--white);
+    color: var(--dark);
+    padding: 10px 25px;
+    border-radius: 25px;
     font-weight: 600;
-    color: var(--white);
-    font-size: 1.5rem;
-}
-
-.placeholder-img {
-    background: var(--gradient);
-}
-
-.portafolio-item h4, .portafolio-item p {
-    padding: 0 1.5rem;
-}
-
-.portafolio-item h4 {
-    margin-top: 1.2rem;
-    font-size: 1.1rem;
-}
-
-.portafolio-item p {
-    color: var(--gray);
-    padding-bottom: 1.5rem;
     font-size: 0.9rem;
+}
+
+.portfolio-info {
+    padding: 1.5rem;
+}
+
+.portfolio-info h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.portfolio-info p {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.portfolio-tag {
+    display: inline-block;
+    background: rgba(108, 92, 231, 0.2);
+    color: var(--accent);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 600;
 }
 
 /* Proceso */
