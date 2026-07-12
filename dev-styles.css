@@ -1,0 +1,342 @@
+/* Developer Pages Styles */
+
+.dev-hero {
+    padding: 120px 0 60px;
+    text-align: center;
+    background: radial-gradient(ellipse at center, rgba(108, 92, 231, 0.15) 0%, transparent 70%);
+}
+
+.dev-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.dev-hero h1 span {
+    background: var(--gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.dev-hero p {
+    color: var(--gray);
+    font-size: 1.1rem;
+}
+
+/* Filters */
+.dev-filters {
+    padding: 20px 0;
+    background: rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.filters {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    background: var(--glass);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--gray);
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: inherit;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+/* Dev Grid */
+.dev-list {
+    padding: 40px 0 60px;
+}
+
+.dev-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.dev-card {
+    background: var(--glass);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 20px;
+    padding: 25px;
+    transition: all 0.3s;
+}
+
+.dev-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(108, 92, 231, 0.4);
+    box-shadow: 0 15px 40px rgba(108, 92, 231, 0.2);
+}
+
+.dev-card-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.dev-avatar {
+    width: 60px;
+    height: 60px;
+    background: var(--gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.dev-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.dev-status {
+    color: #10b981;
+    font-size: 0.8rem;
+}
+
+.dev-bio {
+    color: var(--gray);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.dev-skills {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.dev-skill {
+    background: rgba(108, 92, 231, 0.2);
+    color: var(--accent);
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.dev-prices {
+    background: rgba(0,0,0,0.2);
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.dev-prices h4 {
+    font-size: 0.85rem;
+    color: var(--gray);
+    margin-bottom: 10px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    font-size: 0.9rem;
+}
+
+.price-row span:last-child {
+    color: var(--accent);
+    font-weight: 600;
+}
+
+.dev-payment-methods {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.dev-payment-method {
+    background: rgba(0, 206, 201, 0.1);
+    border: 1px solid rgba(0, 206, 201, 0.3);
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    color: var(--accent);
+}
+
+.dev-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.dev-actions .btn {
+    flex: 1;
+    text-align: center;
+    padding: 12px;
+    font-size: 0.9rem;
+}
+
+.no-devs {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--gray);
+}
+
+.no-devs p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Register Page */
+.dev-register-page {
+    padding: 120px 0 60px;
+}
+
+.register-card {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--glass);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 24px;
+    padding: 40px;
+}
+
+.register-card h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.register-card > p {
+    text-align: center;
+    color: var(--gray);
+    margin-bottom: 30px;
+}
+
+.form-section {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.form-section:last-of-type {
+    border-bottom: none;
+}
+
+.form-section h3 {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: var(--accent);
+}
+
+.form-section input,
+.form-section select,
+.form-section textarea {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 10px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    color: var(--white);
+    font-family: inherit;
+    font-size: 0.95rem;
+}
+
+.form-section input:focus,
+.form-section select:focus,
+.form-section textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+.form-section input::placeholder,
+.form-section textarea::placeholder {
+    color: var(--gray);
+}
+
+.form-section select option {
+    background: var(--dark);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.skill-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.skill-check:hover {
+    background: rgba(108, 92, 231, 0.1);
+}
+
+.skill-check input {
+    width: auto;
+    margin: 0;
+}
+
+.payment-toggle {
+    margin-bottom: 10px;
+}
+
+.payment-toggle label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.payment-toggle input {
+    width: auto;
+}
+
+.payment-fields {
+    padding: 15px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.price-inputs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.price-item label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--gray);
+    margin-bottom: 5px;
+}
+
+.price-item input {
+    width: 100%;
+}
+
+.btn-full {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}

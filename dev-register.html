@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Programador - DevPerú Studio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dev-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Dev<span>Perú</span></a>
+            <nav class="nav">
+                <a href="index.html">Inicio</a>
+                <a href="developers.html">Programadores</a>
+                <a href="dev-login.html">Iniciar Sesión</a>
+            </nav>
+            <button class="menu-btn" id="menuBtn">☰</button>
+        </div>
+    </header>
+
+    <section class="dev-register-page">
+        <div class="container">
+            <div class="register-card">
+                <h1>Regístrate como <span>Programador</span></h1>
+                <p>Crea tu perfil y empieza a recibir pagos directos</p>
+
+                <form id="registerForm">
+                    <div class="form-section">
+                        <h3>👤 Datos Personales</h3>
+                        <input type="text" id="devName" placeholder="Tu nombre completo" required>
+                        <input type="email" id="devEmail" placeholder="Tu email" required>
+                        <input type="tel" id="devPhone" placeholder="Tu teléfono (9 dígitos)" required>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>💻 Tu Perfil</h3>
+                        <textarea id="devBio" placeholder="Cuéntanos sobre ti y tu experiencia..." rows="3"></textarea>
+                        <div class="skills-grid">
+                            <label class="skill-check">
+                                <input type="checkbox" name="skills" value="landing"> Landing Pages
+                            </label>
+                            <label class="skill-check">
+                                <input type="checkbox" name="skills" value="web"> Sitios Web
+                            </label>
+                            <label class="skill-check">
+                                <input type="checkbox" name="skills" value="ecommerce"> E-commerce
+                            </label>
+                            <label class="skill-check">
+                                <input type="checkbox" name="skills" value="app"> Apps Web
+                            </label>
+                            <label class="skill-check">
+                                <input type="checkbox" name="skills" value="wordpress"> WordPress
+                            </label>
+                            <label class="skill-check">
+                                <input type="checkbox" name="skills" value="react"> React
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>💰 Métodos de Pago (para recibir dinero)</h3>
+                        
+                        <div class="payment-toggle">
+                            <label>
+                                <input type="checkbox" id="yapeEnabled" checked> Yape
+                            </label>
+                        </div>
+                        <div class="payment-fields" id="yapeFields">
+                            <input type="text" id="yapeName" placeholder="Nombre en Yape">
+                            <input type="tel" id="yapeNumber" placeholder="Número de Yape (9 dígitos)">
+                        </div>
+
+                        <div class="payment-toggle">
+                            <label>
+                                <input type="checkbox" id="plinEnabled"> Plin
+                            </label>
+                        </div>
+                        <div class="payment-fields" id="plinFields" style="display:none">
+                            <input type="text" id="plinName" placeholder="Nombre en Plin">
+                            <input type="tel" id="plinNumber" placeholder="Número de Plin (9 dígitos)">
+                        </div>
+
+                        <div class="payment-toggle">
+                            <label>
+                                <input type="checkbox" id="bankEnabled"> Transferencia Bancaria
+                            </label>
+                        </div>
+                        <div class="payment-fields" id="bankFields" style="display:none">
+                            <select id="bankName">
+                                <option value="">Selecciona banco</option>
+                                <option value="BCP">BCP</option>
+                                <option value="Interbank">Interbank</option>
+                                <option value="BBVA">BBVA</option>
+                                <option value="Scotiabank">Scotiabank</option>
+                            </select>
+                            <input type="text" id="bankAccount" placeholder="N° de Cuenta">
+                            <input type="text" id="bankHolder" placeholder="Titular de la cuenta">
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>💵 Tus Precios</h3>
+                        <div class="price-inputs">
+                            <div class="price-item">
+                                <label>Landing Page</label>
+                                <input type="number" id="priceLanding" placeholder="S/ 150">
+                            </div>
+                            <div class="price-item">
+                                <label>Sitio Corporativo</label>
+                                <input type="number" id="priceCorp" placeholder="S/ 280">
+                            </div>
+                            <div class="price-item">
+                                <label>E-commerce</label>
+                                <input type="number" id="priceEcom" placeholder="S/ 400">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">Crear Mi Perfil</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="dev-register.js"></script>
+</body>
+</html>

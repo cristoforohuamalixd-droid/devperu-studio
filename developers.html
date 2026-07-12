@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programadores - DevPerú Studio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dev-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="index.html" class="logo">Dev<span>Perú</span></a>
+            <nav class="nav">
+                <a href="index.html">Inicio</a>
+                <a href="dev-register.html">Ser Programador</a>
+                <a href="dev-login.html">Iniciar Sesión</a>
+            </nav>
+            <button class="menu-btn" id="menuBtn">☰</button>
+        </div>
+    </header>
+
+    <section class="dev-hero">
+        <div class="container">
+            <h1>Encuentra un <span>Programador</span></h1>
+            <p>Elige al profesional ideal para tu proyecto y págale directamente</p>
+        </div>
+    </section>
+
+    <section class="dev-filters">
+        <div class="container">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="landing">Landing Pages</button>
+                <button class="filter-btn" data-filter="web">Sitios Web</button>
+                <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+                <button class="filter-btn" data-filter="app">Apps</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="dev-list">
+        <div class="container">
+            <div class="dev-grid" id="devGrid">
+                <!-- Programadores se cargan aquí -->
+            </div>
+            <div class="no-devs" id="noDevs" style="display:none;">
+                <p>No hay programadores disponibles aún.</p>
+                <a href="dev-register.html" class="btn btn-primary">Ser el primero</a>
+            </div>
+        </div>
+    </section>
+
+    <script src="dev-list.js"></script>
+</body>
+</html>
