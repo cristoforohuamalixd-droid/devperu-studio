@@ -87,41 +87,175 @@
     <section class="portafolio" id="portafolio">
         <div class="container">
             <h2>Nuestros <span>Trabajos</span></h2>
-            <p style="text-align:center;color:var(--gray);margin-bottom:4rem;font-size:1.05rem">Proyectos que hablan por nosotros</p>
-            <div class="portafolio-grid">
-                <div class="portafolio-item" onclick="alert('Proximamente tendremos ejemplos reales')">
-                    <div class="portafolio-img">
-                        <div class="portfolio-icon">🍽️</div>
-                        <div class="portfolio-overlay"><span>Ver Proyecto</span></div>
+            <p style="text-align:center;color:var(--gray);margin-bottom:4rem;font-size:1.05rem">Ejemplos reales de lo que podemos hacer por ti</p>
+            <div class="portfolio-grid">
+
+                <div class="portfolio-card" onclick="window.open('https://restaurant-template.example.com','_blank')">
+                    <div class="portfolio-browser">
+                        <div class="browser-bar">
+                            <span class="browser-dots"><i></i><i></i><i></i></span>
+                            <span class="browser-url">mi-restaurante.com</span>
+                        </div>
+                        <div class="browser-preview restaurant-preview">
+                            <div class="preview-hero-text">
+                                <span class="preview-emoji">🍽️</span>
+                                <h4>La Casa del Sabor</h4>
+                                <p>Cocina peruana contemporánea</p>
+                                <div class="preview-btns"><span>Ver Menú</span><span>Reservar</span></div>
+                            </div>
+                            <div class="preview-menu-grid">
+                                <div class="preview-menu-item"><span>🐟</span><p>Ceviche</p><span class="preview-price">S/ 28</span></div>
+                                <div class="preview-menu-item"><span>🥩</span><p>Lomo Saltado</p><span class="preview-price">S/ 32</span></div>
+                                <div class="preview-menu-item"><span>🍜</span><p>Ají de Gallina</p><span class="preview-price">S/ 26</span></div>
+                            </div>
+                        </div>
                     </div>
                     <div class="portfolio-info">
-                        <h4>Sitio Web Restaurante</h4>
-                        <p>Landing page con menú online y reservas</p>
                         <span class="portfolio-tag">Landing Page</span>
+                        <h4>Restaurante Peruano</h4>
+                        <p>Landing page con menú digital interactivo y sistema de reservas</p>
+                        <span class="portfolio-tech">HTML • CSS • JavaScript</span>
                     </div>
                 </div>
-                <div class="portafolio-item" onclick="alert('Proximamente tendremos ejemplos reales')">
-                    <div class="portafolio-img">
-                        <div class="portfolio-icon">👗</div>
-                        <div class="portfolio-overlay"><span>Ver Proyecto</span></div>
+
+                <div class="portfolio-card" onclick="window.open('https://tienda-ropa.example.com','_blank')">
+                    <div class="portfolio-browser">
+                        <div class="browser-bar">
+                            <span class="browser-dots"><i></i><i></i><i></i></span>
+                            <span class="browser-url">moda-store.com</span>
+                        </div>
+                        <div class="browser-preview ecommerce-preview">
+                            <div class="preview-nav-bar"><span>ModaStore</span><span>🔍 🛒 👤</span></div>
+                            <div class="preview-product-grid">
+                                <div class="preview-product"><div class="preview-product-img" style="background:#7c3aed">👗</div><p>Vestido Floral</p><span class="preview-price">S/ 89</span></div>
+                                <div class="preview-product"><div class="preview-product-img" style="background:#06d6a0">👕</div><p>Polo Básico</p><span class="preview-price">S/ 45</span></div>
+                                <div class="preview-product"><div class="preview-product-img" style="background:#f59e0b">👖</div><p>Jeans Classic</p><span class="preview-price">S/ 79</span></div>
+                                <div class="preview-product"><div class="preview-product-img" style="background:#ef4444">👟</div><p>Zapatillas</p><span class="preview-price">S/ 120</span></div>
+                            </div>
+                            <div class="preview-cart-bar"><span>🛒 Carrito (3 items)</span><span>S/ 254</span></div>
+                        </div>
                     </div>
                     <div class="portfolio-info">
-                        <h4>Tienda de Ropa</h4>
-                        <p>E-commerce completo con pasarela de pagos</p>
                         <span class="portfolio-tag">E-commerce</span>
+                        <h4>Tienda de Ropa Online</h4>
+                        <p>E-commerce completo con catálogo, carrito de compras y pasarela de pagos</p>
+                        <span class="portfolio-tech">HTML • CSS • JavaScript • Pagos</span>
                     </div>
                 </div>
-                <div class="portafolio-item" onclick="alert('Proximamente tendremos ejemplos reales')">
-                    <div class="portafolio-img">
-                        <div class="portfolio-icon">🏥</div>
-                        <div class="portfolio-overlay"><span>Ver Proyecto</span></div>
+
+                <div class="portfolio-card" onclick="window.open('https://clinica-dental.example.com','_blank')">
+                    <div class="portfolio-browser">
+                        <div class="browser-bar">
+                            <span class="browser-dots"><i></i><i></i><i></i></span>
+                            <span class="browser-url">dental-salud.com</span>
+                        </div>
+                        <div class="browser-preview corporate-preview">
+                            <div class="preview-nav-bar"><span>🏥 DentalSalud</span><span>Inicio • Servicios • Equipo • Contacto</span></div>
+                            <div class="preview-corporate-hero">
+                                <div class="preview-corporate-text">
+                                    <h4>Tu sonrisa es nuestra pasión</h4>
+                                    <p>Odontología moderna con tecnología de vanguardia</p>
+                                    <span class="preview-btn">Agendar Cita</span>
+                                </div>
+                                <div class="preview-corporate-services">
+                                    <div class="preview-service"><span>🦷</span><p>Limpieza</p></div>
+                                    <div class="preview-service"><span>✨</span><p>Blanqueamiento</p></div>
+                                    <div class="preview-service"><span>🔧</span><p>Ortodoncia</p></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="portfolio-info">
-                        <h4>Sitio Corporativo</h4>
-                        <p>Página profesional para clínica odontológica</p>
                         <span class="portfolio-tag">Corporativo</span>
+                        <h4>Clínica Odontológica</h4>
+                        <p>Sitio corporativo profesional con 5 páginas y formulario de citas</p>
+                        <span class="portfolio-tech">HTML • CSS • JavaScript • SEO</span>
                     </div>
                 </div>
+
+                <div class="portfolio-card" onclick="window.open('https://crm-dashboard.example.com','_blank')">
+                    <div class="portfolio-browser">
+                        <div class="browser-bar">
+                            <span class="browser-dots"><i></i><i></i><i></i></span>
+                            <span class="browser-url">mi-negocio.com/dashboard</span>
+                        </div>
+                        <div class="browser-preview dashboard-preview">
+                            <div class="preview-sidebar"><span>📊</span><span>👥</span><span>📦</span><span>⚙️</span></div>
+                            <div class="preview-dashboard-content">
+                                <div class="preview-dash-header"><h4>Dashboard</h4><span>▼ Admin</span></div>
+                                <div class="preview-stats-row">
+                                    <div class="preview-stat-card"><span>S/ 12,400</span><p>Ventas</p></div>
+                                    <div class="preview-stat-card"><span>48</span><p>Clientes</p></div>
+                                    <div class="preview-stat-card"><span>12</span><p>Proyectos</p></div>
+                                </div>
+                                <div class="preview-chart-placeholder">
+                                    <div class="preview-bar" style="height:40%"></div>
+                                    <div class="preview-bar" style="height:70%"></div>
+                                    <div class="preview-bar" style="height:55%"></div>
+                                    <div class="preview-bar" style="height:90%"></div>
+                                    <div class="preview-bar" style="height:65%"></div>
+                                    <div class="preview-bar" style="height:80%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">App Web</span>
+                        <h4>CRM / Panel de Administración</h4>
+                        <p>Sistema a medida para gestionar clientes, ventas y proyectos</p>
+                        <span class="portfolio-tech">HTML • CSS • JavaScript • Base de Datos</span>
+                    </div>
+                </div>
+
+                <div class="portfolio-card" onclick="window.open('https://academia-online.example.com','_blank')">
+                    <div class="portfolio-browser">
+                        <div class="browser-bar">
+                            <span class="browser-dots"><i></i><i></i><i></i></span>
+                            <span class="browser-url">academia-virtual.com</span>
+                        </div>
+                        <div class="browser-preview academia-preview">
+                            <div class="preview-nav-bar"><span>📚 AcademiaVirtual</span><span>Cursos • Profesores • Inscripción</span></div>
+                            <div class="preview-courses-grid">
+                                <div class="preview-course"><div class="preview-course-img" style="background:#7c3aed">💻</div><p>Programación Web</p><span>32 alumnos</span></div>
+                                <div class="preview-course"><div class="preview-course-img" style="background:#06d6a0">📈</div><p>Marketing Digital</p><span>28 alumnos</span></div>
+                                <div class="preview-course"><div class="preview-course-img" style="background:#f59e0b">🎨</div><p>Diseño Gráfico</p><span>21 alumnos</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Plataforma Web</span>
+                        <h4>Academia Virtual</h4>
+                        <p>Plataforma de cursos online con registro de alumnos y seguimiento</p>
+                        <span class="portfolio-tech">HTML • CSS • JavaScript • PHP</span>
+                    </div>
+                </div>
+
+                <div class="portfolio-card" onclick="window.open('https://inmobiliaria.example.com','_blank')">
+                    <div class="portfolio-browser">
+                        <div class="browser-bar">
+                            <span class="browser-dots"><i></i><i></i><i></i></span>
+                            <span class="browser-url">inmobiliaria-pro.com</span>
+                        </div>
+                        <div class="browser-preview inmueble-preview">
+                            <div class="preview-nav-bar"><span>🏠 InmueblePro</span><span>Comprar • Alquilar • Vender</span></div>
+                            <div class="preview-hero-text">
+                                <h4>Encuentra tu hogar ideal</h4>
+                                <div class="preview-search-bar"><span>📍 Buscar por distrito...</span><span class="preview-btn">Buscar</span></div>
+                            </div>
+                            <div class="preview-properties-grid">
+                                <div class="preview-property"><div class="preview-property-img" style="background:#7c3aed">🏠</div><p>Ate • S/ 320,000</p><span>3 hab • 2 baños • 120m²</span></div>
+                                <div class="preview-property"><div class="preview-property-img" style="background:#06d6a0">🏢</div><p>Surco • S/ 280,000</p><span>2 hab • 1 baño • 85m²</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Sitio Corporativo</span>
+                        <h4>Inmobiliaria</h4>
+                        <p>Sitio con catálogo de propiedades, filtros de búsqueda y contacto directo</p>
+                        <span class="portfolio-tech">HTML • CSS • JavaScript • Filtros</span>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
