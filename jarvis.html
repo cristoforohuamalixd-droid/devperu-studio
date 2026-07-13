@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jarvis - Asistente DevPerú Studio</title>
+    <link rel="stylesheet" href="jarvis-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="jarvis-container">
+        <!-- Header -->
+        <div class="jarvis-header">
+            <div class="jarvis-logo">
+                <div class="logo-ring">
+                    <div class="ring ring-1"></div>
+                    <div class="ring ring-2"></div>
+                    <div class="ring ring-3"></div>
+                    <div class="core"></div>
+                </div>
+            </div>
+            <h1>JARVIS</h1>
+            <p class="subtitle">Asistente Virtual - DevPerú Studio</p>
+        </div>
+
+        <!-- Chat Area -->
+        <div class="chat-area" id="chatArea">
+            <div class="message jarvis-message">
+                <div class="message-avatar">🤖</div>
+                <div class="message-content">
+                    <p>¡Hola! Soy JARVIS, tu asistente virtual de DevPerú Studio.</p>
+                    <p>Puedo ayudarte con:</p>
+                    <ul>
+                        <li>📋 Información de servicios</li>
+                        <li>💰 Precios y planes</li>
+                        <li>📅 Agendar una consulta</li>
+                        <li>❓ Resolver dudas</li>
+                    </ul>
+                    <p>¿En qué puedo ayudarte hoy?</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="quick-actions">
+            <button class="quick-btn" data-msg="¿Cuáles son sus servicios?">📋 Servicios</button>
+            <button class="quick-btn" data-msg="¿Cuánto cuesta una landing page?">💰 Precios</button>
+            <button class="quick-btn" data-msg="Quiero agendar una consulta">📅 Agendar</button>
+            <button class="quick-btn" data-msg="¿Cómo funciona el plan gratis?">🎁 Plan Gratis</button>
+            <button class="quick-btn" data-msg="¿Cuáles son los métodos de pago?">💳 Pagos</button>
+            <button class="quick-btn" data-msg="Hablar con un asesor">👨‍💻 Asesor</button>
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-area">
+            <input type="text" id="userInput" placeholder="Escribe tu mensaje..." autocomplete="off">
+            <button id="sendBtn" class="send-btn">
+                <span>➤</span>
+            </button>
+        </div>
+
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div class="status-item">
+                <span class="status-dot online"></span>
+                <span>En línea</span>
+            </div>
+            <div class="status-item">
+                <span>Powered by AI</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="jarvis-script.js"></script>
+</body>
+</html>
