@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /panel-pagos.html
+
+Sitemap: https://devperu-studio.surge.sh/sitemap.xml
