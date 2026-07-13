@@ -14,9 +14,12 @@
             <nav class="nav">
                 <a href="#servicios">Servicios</a>
                 <a href="#portafolio">Portafolio</a>
+                <a href="#cotizador">Cotizar</a>
                 <a href="#precios">Precios</a>
                 <a href="developers.html">Programadores</a>
+                <a href="#faq">FAQ</a>
                 <a href="#contacto">Contacto</a>
+                <button class="theme-toggle" id="themeToggle" title="Cambiar tema">🌙</button>
             </nav>
             <button class="menu-btn" id="menuBtn">☰</button>
         </div>
@@ -348,6 +351,140 @@
                         <li>Soporte 2 meses</li>
                     </ul>
                     <a href="#contacto" class="btn btn-outline">Elegir Plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cotizador" id="cotizador">
+        <div class="container">
+            <h2>Cotiza tu <span>Proyecto</span></h2>
+            <p style="text-align:center;color:var(--gray);margin-bottom:3rem;font-size:1.05rem">Selecciona lo que necesitas y obtén un precio al instante</p>
+            <div class="cotizador-card">
+                <div class="cotizador-steps">
+                    <div class="cot-step active" data-step="1"><span>1</span> Tipo</div>
+                    <div class="cot-step" data-step="2"><span>2</span> Extras</div>
+                    <div class="cot-step" data-step="3"><span>3</span> Resultado</div>
+                </div>
+
+                <div class="cot-panel" id="cotStep1">
+                    <h3>¿Qué tipo de sitio necesitas?</h3>
+                    <div class="cot-options">
+                        <label class="cot-option"><input type="radio" name="tipo" value="landing" checked><div class="cot-option-content"><span class="cot-icon">🌐</span><strong>Landing Page</strong><span>Página única</span></div></label>
+                        <label class="cot-option"><input type="radio" name="tipo" value="corporativo"><div class="cot-option-content"><span class="cot-icon">💻</span><strong>Sitio Corporativo</strong><span>3-10 páginas</span></div></label>
+                        <label class="cot-option"><input type="radio" name="tipo" value="ecommerce"><div class="cot-option-content"><span class="cot-icon">🛒</span><strong>E-commerce</strong><span>Tienda online</span></div></label>
+                        <label class="cot-option"><input type="radio" name="tipo" value="app"><div class="cot-option-content"><span class="cot-icon">📱</span><strong>App Web</strong><span>Sistema a medida</span></div></label>
+                    </div>
+                    <button class="btn btn-primary cot-next" onclick="cotNext(2)">Siguiente →</button>
+                </div>
+
+                <div class="cot-panel" id="cotStep2" style="display:none">
+                    <h3>Funciones adicionales</h3>
+                    <div class="cot-extras">
+                        <label class="cot-extra"><input type="checkbox" id="extraSeo"><div><strong>🔍 SEO Básico</strong><span>Para que aparezcas en Google</span></div><span class="cot-extra-price">+S/ 50</span></label>
+                        <label class="cot-extra"><input type="checkbox" id="extraForm"><div><strong>📝 Formulario Avanzado</strong><span>Formulario con validación y notificaciones</span></div><span class="cot-extra-price">+S/ 40</span></label>
+                        <label class="cot-extra"><input type="checkbox" id="extraAnim"><div><strong>✨ Animaciones</strong><span>Efectos visuales y transiciones</span></div><span class="cot-extra-price">+S/ 60</span></label>
+                        <label class="cot-extra"><input type="checkbox" id="extraAdmin"><div><strong>⚙️ Panel Admin</strong><span>Para gestionar tu contenido</span></div><span class="cot-extra-price">+S/ 120</span></label>
+                        <label class="cot-extra"><input type="checkbox" id="extraMulti"><div><strong>🌐 Multi-idioma</strong><span>Español + Inglés</span></div><span class="cot-extra-price">+S/ 80</span></label>
+                        <label class="cot-extra"><input type="checkbox" id="extraChat"><div><strong>💬 Chat en Vivo</strong><span>Chat con tus clientes</span></div><span class="cot-extra-price">+S/ 50</span></label>
+                    </div>
+                    <div class="cot-nav-btns">
+                        <button class="btn btn-secondary" onclick="cotNext(1)">← Atrás</button>
+                        <button class="btn btn-primary" onclick="cotNext(3)">Ver Precio →</button>
+                    </div>
+                </div>
+
+                <div class="cot-panel" id="cotStep3" style="display:none">
+                    <h3>Tu cotización personalizada</h3>
+                    <div class="cot-result">
+                        <div class="cot-result-type" id="cotResultType">Landing Page</div>
+                        <div class="cot-result-extras" id="cotResultExtras"></div>
+                        <div class="cot-result-divider"></div>
+                        <div class="cot-result-total">
+                            <span>Total estimado</span>
+                            <div class="cot-result-price" id="cotResultPrice">S/ 150</div>
+                            <span class="cot-result-note">* Precio final puede variar según complejidad</span>
+                        </div>
+                        <div class="cot-result-actions">
+                            <a href="#contacto" class="btn btn-primary">Solicitar Presupuesto</a>
+                            <a href="https://wa.me/51953771229?text=Hola,%20cotice%20un%20proyecto%20en%20su%20web" target="_blank" class="btn btn-secondary">💬 WhatsApp</a>
+                        </div>
+                    </div>
+                    <button class="btn btn-secondary" onclick="cotNext(1)" style="margin-top:16px">🔄 Cotizar Otro Proyecto</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonios" id="testimonios">
+        <div class="container">
+            <h2>Lo que dicen nuestros <span>Clientes</span></h2>
+            <p style="text-align:center;color:var(--gray);margin-bottom:3rem;font-size:1.05rem">La satisfacción de nuestros clientes es nuestra mejor carta</p>
+            <div class="testimonios-grid">
+                <div class="testimonio-card">
+                    <div class="testimonio-stars">★★★★★</div>
+                    <p class="testimonio-text">"DevPerú creó mi página de restaurante y en el primer mes me llegaron 30 reservas por WhatsApp. Excelente trabajo y muy profesionales."</p>
+                    <div class="testimonio-author">
+                        <div class="testimonio-avatar">MR</div>
+                        <div><strong>Miguel Rodríguez</strong><span>Restaurante La Casa del Sabor</span></div>
+                    </div>
+                </div>
+                <div class="testimonio-card">
+                    <div class="testimonio-stars">★★★★★</div>
+                    <p class="testimonio-text">"Necesitaba una tienda online para mi marca de ropa y quedé impresionada. El diseño es increíble y mis clientas adoran comprar por ahí."</p>
+                    <div class="testimonio-author">
+                        <div class="testimonio-avatar">CL</div>
+                        <div><strong>Carla López</strong><span>ModaStore Perú</span></div>
+                    </div>
+                </div>
+                <div class="testimonio-card">
+                    <div class="testimonio-stars">★★★★★</div>
+                    <p class="testimonio-text">"Contraté el plan gratis para probar y la verdad superó mis expectativas. Mi consultorio ahora tiene más pacientes gracias a la página web."</p>
+                    <div class="testimonio-author">
+                        <div class="testimonio-avatar">DG</div>
+                        <div><strong>Dra. Gloria Torres</strong><span>Clínica DentalSonrisa</span></div>
+                    </div>
+                </div>
+                <div class="testimonio-card">
+                    <div class="testimonio-stars">★★★★★</div>
+                    <p class="testimonio-text">"El sistema CRM que nos hicieron a medida nos ayudó a organizar todos nuestros clientes. Ahorramos horas de trabajo cada semana."</p>
+                    <div class="testimonio-author">
+                        <div class="testimonio-avatar">JP</div>
+                        <div><strong>Jorge Paredes</strong><span>Inmobiliaria Hogar</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2>Preguntas <span>Frecuentes</span></h2>
+            <p style="text-align:center;color:var(--gray);margin-bottom:3rem;font-size:1.05rem">Resolvemos todas tus dudas</p>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">¿Cuánto tiempo tarda en estar listo mi sitio web? <span class="faq-arrow">▼</span></button>
+                    <div class="faq-answer"><p>Depende del plan: una Landing Page en 3-5 días, un sitio corporativo en 7-10 días, y un e-commerce en 10-15 días. Siempre te mantenemos informado del avance.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">¿El plan gratis realmente es gratis? <span class="faq-arrow">▼</span></button>
+                    <div class="faq-answer"><p>Sí, 100% gratis por 1 año completo. Incluye hosting, subdominio y soporte básico. No pedimos tarjeta de crédito ni datos de pago.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">¿Puedo pedir cambios después de la entrega? <span class="faq-arrow">▼</span></button>
+                    <div class="faq-answer"><p>¡Por supuesto! Incluimos revisiones durante el desarrollo. Después de la entrega, el plan Premium incluye 2 meses de soporte gratuito para ajustes menores.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">¿Cómo funcionan los pagos? <span class="faq-arrow">▼</span></button>
+                    <div class="faq-answer"><p>Aceptamos Yape, Plin, transferencia bancaria y efectivo. El pago se realiza directamente al programador. Puedes pagar en cuotas: 50% al inicio y 50% a la entrega.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">¿Necesito saber de programación? <span class="faq-arrow">▼</span></button>
+                    <div class="faq-answer"><p>No. Nosotros nos encargamos de todo. Tú solo cuéntanos qué necesitas y nosotros lo hacemos realidad. Te entramos todo listo para usar.</p></div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">¿Puedo cambiar de plan después? <span class="faq-arrow">▼</span></button>
+                    <div class="faq-answer"><p>Sí, puedes mejorar tu plan en cualquier momento. Solo pagas la diferencia. También puedes agregar funcionalidades adicionales por separado.</p></div>
                 </div>
             </div>
         </div>
